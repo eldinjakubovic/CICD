@@ -19,8 +19,8 @@ steps:
 - task: PublishCodeCoverageResults@1
   inputs:
       codeCoverageTool: "JaCoCo"
-      summaryFileLocation: "$(System.DefaultWorkingDirectory)/**/site/jacoco/jacoco.xml"
-      reportDirectory: "$(System.DefaultWorkingDirectory)/**/site/jacoco"
+      summaryFileLocation: "$(System.DefaultWorkingDirectory)/coverage/cobertura-coverage.xml"
+      reportDirectory: "$(System.DefaultWorkingDirectory)/**/site/coverage/cobertura-coverage"
       failIfCoverageEmpty: true
       
 strategy:
