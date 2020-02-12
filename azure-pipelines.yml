@@ -23,13 +23,13 @@ steps:
       reportDirectory: "$(System.DefaultWorkingDirectory)/**/site/jacoco"
       failIfCoverageEmpty: true
       
-      strategy:
-  matrix:
-    linux:
-      imageName: "ubuntu-16.04"
-    mac:
-      imageName: "macos-10.14"
-    windows:
-      imageName: "vs2017-win2016"
-  maxParallel: 3
+strategy:
+        matrix:
+          linux:
+            imageName: "ubuntu-16.04"
+          mac:
+            imageName: "macos-10.14"
+          windows:
+            imageName: "vs2017-win2016"
+        maxParallel: 3
 
