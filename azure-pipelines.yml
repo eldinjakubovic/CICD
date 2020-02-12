@@ -20,16 +20,8 @@ steps:
   inputs:
       codeCoverageTool: "JaCoCo"
       summaryFileLocation: "$(System.DefaultWorkingDirectory)/coverage/cobertura-coverage.xml"
-      reportDirectory: "$(System.DefaultWorkingDirectory)/**/site/coverage/cobertura-coverage"
+      reportDirectory: "$(System.DefaultWorkingDirectory)/coverage/cobertura-coverage"
       failIfCoverageEmpty: true
       
-strategy:
-        matrix:
-          linux:
-            imageName: "ubuntu-16.04"
-          mac:
-            imageName: "macos-10.14"
-          windows:
-            imageName: "vs2017-win2016"
-        maxParallel: 3
+
 
